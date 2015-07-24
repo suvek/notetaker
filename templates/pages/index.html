@@ -1,0 +1,51 @@
+{% extends "pages/base.html" %}
+
+{% block page_contents %}
+<div class="container">
+        
+    <div class="row">
+        
+        <div class="jumbotron">
+            <h1>Welcome to Note Taker!</h1>
+            <p>Organize your notes for free!</p>
+            <p><a class="btn btn-primary btn-lg" href="/pages/signup" role="button">Sign up Today!</a></p>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        {% if user %}
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Hello {{user.username}}</h1>
+                </div>
+            </div>
+        {% endif %}
+        
+        <div class="col-md-4">
+            <h3>Categories</h3>
+            Create your categories and save notes under them.
+        </div>
+
+        <div class="col-md-4">
+            <h3>Unlimited Notes</h3>
+            Save as many notes you want.
+        </div>
+
+        <div class="col-md-4">
+            <h3>Free Forever</h3>
+            Note Taker will be free forever.
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+            <p class="pull-right">Built with love in Dharamsala!</p>
+        </div>
+    </div>
+
+</div>
+{% endblock page_contents %}
